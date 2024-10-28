@@ -1,1 +1,14 @@
-type=AVC msg=audit(1645797812.960:681658): avc:  denied  { dac_override } for  pid=*** comm="reader*" capability=1  scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:system_r:collectd_t:s0 tclass=capability permissive=0
+type=AVC avc:  denied  { dac_override } for pid=*** comm="reader*" capability=1  scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:system_r:collectd_t:s0 tclass=capability permissive=0
+type=AVC avc:  denied  { write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:tmpfs_t:s0 tclass=file permissive=0
+type=AVC avc:  denied  { write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:user_tmp_t:s0 tclass=dir permissive=0
+type=AVC avc:  denied  { add_name create write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:rpc_pipefs_t:s0 tclass=dir permissive=0
+type=AVC avc:  denied  { add_name create write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:dosfs_t:s0 tclass=dir permissive=0
+type=AVC avc:  denied  { add_name write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:binfmt_misc_fs_t:s0 tclass=dir permissive=0
+type=AVC avc:  denied  { add_name write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:cgroup_t:s0 tclass=dir permissive=0
+type=AVC avc:  denied  { add_name write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:tracefs_t:s0 tclass=dir permissive=0
+type=AVC avc:  denied  { create } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:tracefs_t:s0 tclass=file permissive=0
+type=AVC avc:  denied  { create } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:binfmt_misc_fs_t:s0 tclass=file permissive=0
+type=AVC avc:  denied  { create } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:cgroup_t:s0 tclass=file permissive=0
+type=AVC avc:  denied  { create } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:rpc_pipefs_t:s0 tclass=file permissive=0
+type=AVC avc:  denied  { create open read write } for pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:dosfs_t:s0 tclass=file permissive=0
+type=AVC avc:  denied  { execute } for  pid=*** comm="collectd" scontext=system_u:system_r:collectd_t:s0 tcontext=system_u:object_r:dosfs_t:s0 tclass=file permissive=0
