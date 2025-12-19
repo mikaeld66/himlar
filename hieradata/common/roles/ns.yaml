@@ -4,6 +4,7 @@ include:
     - profile::dns::ns
     - profile::dns::rndc_key
     - profile::logging::rsyslog::client
+    - profile::logging::fluent-bit
 
 named_interfaces::config:
   mgmt:
@@ -142,3 +143,5 @@ profile::logging::rsyslog::client::legacy_config:
   local_log:
     key:    'local7.*'
     value:  '/var/log/boot.log'
+
+profile::logging::fluentbit::manage_fluentbit:  true

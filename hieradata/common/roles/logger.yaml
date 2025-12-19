@@ -3,7 +3,6 @@ include:
   default:
     - profile::logging::rsyslog::server
     - profile::logging::logrotate
-    - profile::logging::elk
 
 profile::base::selinux::manage_selinux:   true
 

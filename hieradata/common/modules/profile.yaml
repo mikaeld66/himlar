@@ -325,13 +325,6 @@ profile::base::yumrepo::repo_hash:
     enabled:        1
     gpgcheck:       1
     gpgkey:         "%{hiera('yum_base_mirror')}/%{hiera('repo_dist')}/rabbitmq_server-noarch/gpg.9F4587F226208342.key"
-  elk6:
-    ensure:         absent
-    descr:          'ELK 6 Centos Repo'
-    baseurl:        "%{hiera('yum_base_mirror')}/generic/elasticsearch6/"
-    enabled:        1
-    gpgcheck:       1
-    gpgkey:         "%{hiera('yum_base_mirror')}/generic/elasticsearch6/GPG-KEY-elasticsearch"
   curator5:
     ensure:         absent
     descr:          'Elasticsearch Curator 5.x Centos Repo'
@@ -412,6 +405,13 @@ profile::base::yumrepo::repo_hash:
     enabled:        1
     gpgcheck:       1
     gpgkey:         'https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo'
+  fluentbit:
+    ensure:         absent
+    descr:          'Fluent Bit repository'
+    mirrorlist:     "%{hiera('yum_base_mirror')}/%{hiera('repo_dist')}/fluentbit"
+    enabled:        1
+    gpgcheck:       1
+    gpgkey:         "%{hiera('yum_base_mirror')}/%{hiera('repo_dist')}/fluentbit/fluentbit.key"
 
 profile::base::dell::repo_hash:
   dell-system-update_dependent:
